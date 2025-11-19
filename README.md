@@ -12,7 +12,24 @@ mainscreen.html - line 21 changed h2 to "Single Bags"
 mainscreen.html - line 53 - changed h2 to "box of bags"
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
-
+about.html - line 1-15 - copied first 15 lines of mainscreen.html to about.html to match structure
+about.html - line 14 - changed title to "about"
+mainscreen.html - line 21 - added button for about page
+MainScreenController.java - line 55-58 - added controller for about page
+about.html - line 17 - added body section start
+about.html - line 18 - added div section start
+about.html - line 20 - added header 1
+about.html - line 21 - added link to home page
+about.html - line 23 - added hr
+about.html - line 24 - added h2 for title of first section
+about.html - line 25-31 - added paragraph for first section
+about.html - line 32 - added hr
+about.html - line 33 - added h2 for second section
+about.html - line 34-36 - added paragraph for second section
+about.html - line 37 - added hr
+about.html - line 39 - end of div
+about.html - line 40 - end of body
+about.html - line 42 - end of html
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
