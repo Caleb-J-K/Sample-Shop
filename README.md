@@ -57,6 +57,21 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
+Part.java - line 32-36 - added 2 variables, maxInv and minInv
+Part.java - line 50, 51, 59, and 60 - added default values for maxInv and minInv
+Part.Java - line 103-109 - added getter and setter methods for maxInv and minInv
+InhousePart.java - line 18-19 - added values for minInv and maxInv
+OutsourcedPart.java - line 18-19 - added values for minInv and maxInv
+mainscreen.html - line 39-40 - added table headers for min and max inventory
+mainscreen.html - line 49-50 - added table rows for min and max inventory
+BootStrapData.java - line 45, 46, 59, 60, 73, 74, 93, 94, 110, 111 - added min and max inv to each part
+InhousePartForm - line 24-28 - added entry fields for min and max inventory thresholds
+OutsourcedPartForm - line 22-26 - added entry fields for min and max inventory thresholds
+application.properties - line 6 - changed location of persistent database to "CJ-Chips.db"
+Part.java - line 111-118 - added method to ensure inventory values are between min and max
+PartServiceImpl.java - line 59 - added call to validateLimits method to save method
+InhousePartServiceImpl - line 54 - added call to validateLimits method to save method
+OutsourcedPartServiceImpl - line 52 - added call to validateLimits method to save method
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.

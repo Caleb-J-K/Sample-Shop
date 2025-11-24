@@ -3,6 +3,7 @@ package com.example.demo.domain;
 import com.example.demo.validators.ValidDeletePart;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -28,6 +29,12 @@ public abstract class Part implements Serializable {
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
+    @Min(value = 0, message = "Minimum inventory value must be psoitive")
+    int minInv;
+
+    @Min(value = 0, message = "Maximum inventory must be positive")
+    @Max(value = 100, message = "Maximum inventory value must be within maximum")
+    int maxInv;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
@@ -41,6 +48,8 @@ public abstract class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+        this.minInv = 0;
+        this.maxInv = 50;
     }
 
     public Part(long id, String name, double price, int inv) {
@@ -48,6 +57,8 @@ public abstract class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+        this.minInv = 0;
+        this.maxInv = 50;
     }
 
     public long getId() {
@@ -88,6 +99,23 @@ public abstract class Part implements Serializable {
 
     public void setProducts(Set<Product> products) {
         this.products = products;
+    }
+
+    public int getMinInv() { return minInv; }
+
+    public void setMinInv(int minInv) { this.minInv = minInv; }
+
+    public int getMaxInv() { return maxInv; }
+
+    public void setMaxInv(int maxInv) { this.maxInv = maxInv; }
+
+    public void validateLimits() {
+        if (this.inv < this.minInv) {
+            throw new RuntimeException("This value is lower than required minimum");
+        }
+        else if (this.inv > this.maxInv) {
+            throw new RuntimeException("This value is higher than required maximum");
+        }
     }
 
     public String toString(){
