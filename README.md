@@ -27,14 +27,17 @@ about.html - line 32 - added hr
 about.html - line 33 - added h2 for second section
 about.html - line 34-36 - added paragraph for second section
 about.html - line 37 - added hr
-about.html - line 39 - end of div
-about.html - line 40 - end of body
-about.html - line 42 - end of html
+about.html - line 39 - added end of div
+about.html - line 40 - added end of body
+about.html - line 42 - added end of html
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
+BootStrapData.java - line 27-33 - added repo for inhouse parts
+BootStrapData.java - line 37-113 - added 5 new parts, 3 inhouse and 2 outsourced
+BootStrapData.java - line 116-126 - added 5 new products to the repository
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 •  The “Buy Now” button must be next to the buttons that update and delete products.
