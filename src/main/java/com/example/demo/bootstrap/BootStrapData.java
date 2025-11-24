@@ -120,11 +120,13 @@ public class BootStrapData implements CommandLineRunner {
         Product sourcreamonion_snackbox= new Product("Sour Cream and Onion Snack Box",40.0,20);
         Product jalapeno_snackbox= new Product("Jalapeno Snack Box",40.0,20);
 
-        productRepository.save(original_snackbox);
-        productRepository.save(bbq_snackbox);
-        productRepository.save(Cheddar_snackbox);
-        productRepository.save(sourcreamonion_snackbox);
-        productRepository.save(jalapeno_snackbox);
+        if (productRepository.count() == 0) {
+            productRepository.save(original_snackbox);
+            productRepository.save(bbq_snackbox);
+            productRepository.save(Cheddar_snackbox);
+            productRepository.save(sourcreamonion_snackbox);
+            productRepository.save(jalapeno_snackbox);
+        }
 
 
         System.out.println("Started in Bootstrap");
