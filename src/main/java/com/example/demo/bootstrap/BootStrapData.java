@@ -118,7 +118,7 @@ public class BootStrapData implements CommandLineRunner {
         Product bbq_snackbox= new Product("BBQ Snack Box",30.0,15);
         Product Cheddar_snackbox= new Product("Cheddar Snack Box",30.0,15);
         Product sourcreamonion_snackbox= new Product("Sour Cream and Onion Snack Box",40.0,20);
-        Product jalapeno_snackbox= new Product("BBQ Snack Box",40.0,20);
+        Product jalapeno_snackbox= new Product("Jalapeno Snack Box",40.0,20);
 
         productRepository.save(original_snackbox);
         productRepository.save(bbq_snackbox);
