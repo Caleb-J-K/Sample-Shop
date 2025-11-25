@@ -90,5 +90,8 @@ InhousePartForm.java - line 32-36 - added code to display error message in HTML 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
+PartTest.java - line 159-194 - added 4 unit tests for getter and setter methods for min and max inv of parts class
 
 J.  Remove the class files for any unused validators in order to clean your code.
+
+- removed unused files, DeletePartValidator.java and ValidDeletePart.java
