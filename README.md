@@ -95,3 +95,6 @@ PartTest.java - line 159-194 - added 4 unit tests for getter and setter methods 
 J.  Remove the class files for any unused validators in order to clean your code.
 
 - removed unused files, DeletePartValidator.java and ValidDeletePart.java
+
+Fixes: OutsourcedPartForm.html - line 35 - fixed typo causing whitelabel error to occur when adding an item above or below max or min
+Fixes: InhousePartForm.html - line 34 - fixed typo causing whitelabel error to occur when adding an item above or below max or min
